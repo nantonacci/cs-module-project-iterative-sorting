@@ -7,18 +7,22 @@ def selection_sort(arr):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
         # Your code here
-
-
+        for n in range(i+1, len(arr)):
+            if arr[smallest_index] > arr[n]:
+                smallest_index = n
         # TO-DO: swap
         # Your code here
-
+        arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
     return arr
 
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     # Your code here
-
+    for i in range(len(arr)-1):
+        for n in range(len(arr)-i-1):
+            if arr[n] > arr[n+1]:
+                arr[n], arr[n+1] = arr[n+1], arr[n]
 
     return arr
 
